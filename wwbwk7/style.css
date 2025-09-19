@@ -1,0 +1,57 @@
+body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    transition: background 0.3s;
+  }
+  
+  h1, h2 {
+    color: #333;
+  }
+  
+  button {
+    margin: 10px;
+    padding: 10px 16px;
+    border: none;
+    border-radius: 6px;
+    background: #007BFF;
+    color: white;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+  }
+  
+  button:hover {
+    background: #0056b3;
+    transform: scale(1.05);
+  }
+  
+  /* 🎨 Part 1: Keyframe Animation */
+  .fancy-btn {
+    animation: pulse 2s infinite;
+  }
+  
+  @keyframes pulse {
+    0%   { transform: scale(1); }
+    50%  { transform: scale(1.1); background: #ff4081; }
+    100% { transform: scale(1); }
+  }
+  
+  /* Animated Box */
+  #box {
+    width: 100px;
+    height: 100px;
+    background: coral;
+    margin: 20px 0;
+    border-radius: 8px;
+    transition: transform 0.5s, background 0.5s;
+  }
+  
+  /* Triggered animations */
+  .animate {
+    animation: slideAndFade 1s forwards;
+  }
+  
+  @keyframes slideAndFade {
+    from { transform: translateX(0) scale(1); opacity: 1; }
+    to   { transform: translateX(200px) scale(1.2); opacity: 0.5; }
+  }
+  
